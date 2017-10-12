@@ -24,7 +24,7 @@ double SumOfArrayQPC() {
 	return (double)(liFinish.QuadPart - liStart.QuadPart) / liFreq.QuadPart;
 }
 
-void SumOfArrayRDTSK() {
+int SumOfArrayRDTSK() {
 	int liStart, liFinish;
 	int sum = 0;
 	int randomDigits[1000] = {};
@@ -38,6 +38,6 @@ void SumOfArrayRDTSK() {
 		sum += randomDigits[i];
 	}
 	liFinish = __rdtsc();
-	printf("%d", liFinish - liStart);
+	return liFinish - liStart;
 }
 

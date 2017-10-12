@@ -149,9 +149,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbsoluteAndRelativeTimes.h" />
+    <ClInclude Include="ArraySum.h" />
     <ClInclude Include="GetMaxDate.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MatrixMultiplication.h" />
+    <ClInclude Include="TimeAccuracy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

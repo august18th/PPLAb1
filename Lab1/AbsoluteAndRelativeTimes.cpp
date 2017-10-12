@@ -10,7 +10,7 @@ double ArraySumFor1() {
 	double Start, Finish;
 	for (int i = 0; i < 10000; i++)
 	{
-		randomDigits[i] = i; // запись случайного числа, которое вернет rand()
+		randomDigits[i] = i; 
 	}
 	Start = omp_get_wtime();
 	for (int i = 0; i < 10000; i++) {
@@ -26,7 +26,7 @@ double ArraySumFor2() {
 	double Start, Finish;
 	for (int i = 0; i < 20000; i++)
 	{
-		randomDigits[i] = i; // запись случайного числа, которое вернет rand()
+		randomDigits[i] = i; 
 	}
 	Start = omp_get_wtime();
 	for (int i = 0; i < 20000; i++) {
@@ -42,7 +42,7 @@ double ArraySumFor3() {
 	double Start, Finish;
 	for (int i = 0; i < 30000; i++)
 	{
-		randomDigits[i] = i; // запись случайного числа, которое вернет rand()
+		randomDigits[i] = i; 
 	}
 	Start = omp_get_wtime();
 	for (int i = 0; i < 30000; i++) {

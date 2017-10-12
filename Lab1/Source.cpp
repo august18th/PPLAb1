@@ -5,10 +5,16 @@
 #include "GetMaxDate.h"
 #include "Matrix.h"
 #include "MatrixMultiplication.h"
+#include "TimeAccuracy.h"
+#include "ArraySum.h"
 
 int main()
 {
 	printf("Last date when used 32 bit func time() %s", asctime(GetMaxDateInt32()));
+	printf("Accuracy Of GSTAFT %d\n", GetTimeAccuracyForGSTAFT()/10000);
+	printf("Accuracy Of GTC %d\n", GetTimeAccuracyForGTC());
+	printf("Time for RDTSK %f\n", (double)(SumOfArrayRDTSK() / (2.5 * 1000000000)));
+	printf("Time for QPC %f\n", SumOfArrayQPC());
 	printf("T2/T1 = %f\n", ArraySumFor2() / ArraySumFor1());
 	printf("T3/T1 = %f\n", ArraySumForRelative2() / ArraySumForRelative1());
 	printf("T2'/T1' = %f\n", ArraySumFor3() / ArraySumFor1());
@@ -19,7 +25,7 @@ int main()
 	Matrix matrix1(firstArray);
 	int **arr3 = 0;
 	MatrixMultiplication(arr3, 2, matrix1, matrix2);
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 2; i++){
 		for (int j = 0; j < 2; j++) {
 			printf("%d ", arr3[i][j]);
 		}

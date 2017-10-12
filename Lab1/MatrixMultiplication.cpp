@@ -1,12 +1,14 @@
 #include "Matrix.h"
 #include <vector>
 
-void MatrixMultiplicationForArrays(int firstMatrix[][2], int secondMatrix[][2], int size, int **&resultMatrix) {
-	resultMatrix = (int **)malloc(2 * sizeof(int *));
-	for (int i = 0; i < 2; i++)
-	{
-		resultMatrix[i] = (int *)malloc(2 * sizeof(int));
+void AllocateMemoryForArrays(int **&allocatedArray, int size){
+	allocatedArray = (int **)malloc(size * sizeof(int));
+	for (int i = 0; i < size; i++) {
+		allocatedArray[i] = (int *)malloc(size * sizeof(int));
 	}
+}
+void MatrixMultiplicationForArrays(int firstMatrix[][2], int secondMatrix[][2], int size, int **&resultMatrix) {
+	AllocateMemoryForArrays(resultMatrix, size);
 	int out;
 	for (int i = 0; i < size; i++)
 	{
